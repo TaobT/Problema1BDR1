@@ -1,0 +1,99 @@
+<form [formGroup]="filtroAreaInteres">
+    <mat-form-field appearance="fill" >
+        <mat-label>Area de interes</mat-label>
+        <mat-select formControlName="areaInteres" >
+            <mat-option value="Ingeniería">
+                Ingenieria
+            </mat-option>
+            <mat-option value="Forense">
+                Forense
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="buscarAreaInteres()" >Aplicar</button>
+    <button mat-raised-button color="primary" (click)="restart()" >Reiniciar</button>
+</form>
+
+<div class="tablasGeneros">
+    <h1 class="tituloTablaGeneros">Tabla de hombres</h1>
+    <table  mat-table [dataSource]="dataSourceMale" class="mat-elevation-z8 tabla-media" #tablaHombres>
+
+    <!-- Columna Nombre -->
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef  sortActionDescription="Ordenar por nombre">
+            Nombre
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <!-- Columna Apellido Paterno -->
+    <ng-container matColumnDef="apellidoPa">
+        <th mat-header-cell *matHeaderCellDef  sortActionDescription="Ordenar por apellido paterno">
+            Apellido Paterno
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.apellidoPa}} </td>
+    </ng-container>
+
+    <!-- Columna Apellido Materno -->
+    <ng-container matColumnDef="apellidoMa">
+        <th mat-header-cell *matHeaderCellDef  sortActionDescription="Ordenar por apellido materno">
+            Apellido Materno
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.apellidoMa}} </td>
+    </ng-container>
+
+
+    <!-- Columna Area de Interes -->
+    <ng-container matColumnDef="areaInteres">
+        <th mat-header-cell *matHeaderCellDef  sortActionDescription="Ordenar por area de interes">
+            Area de interes
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.areaInteres}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
+    <tr mat-row *matRowDef="let row; columns: getDisplayedColumns();"></tr>
+    </table>
+
+
+
+    <h1  class="tituloTablaGeneros">Tabla de mujeres</h1>
+    <table  mat-table [dataSource]="dataSourceFemale" matSort class="mat-elevation-z8 tabla-media" #tablaMujeres>
+
+    <!-- Columna Nombre -->
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef  sortActionDescription="Ordenar por nombre">
+            Nombre
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <!-- Columna Apellido Paterno -->
+    <ng-container matColumnDef="apellidoPa">
+        <th mat-header-cell *matHeaderCellDef  sortActionDescription="Ordenar por apellido paterno">
+            Apellido Paterno
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.apellidoPa}} </td>
+    </ng-container>
+
+    <!-- Columna Apellido Materno -->
+    <ng-container matColumnDef="apellidoMa">
+        <th mat-header-cell *matHeaderCellDef  sortActionDescription="Ordenar por apellido materno">
+            Apellido Materno
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.apellidoMa}} </td>
+    </ng-container>
+
+    <!-- Columna Area de Interes -->
+    <ng-container matColumnDef="areaInteres">
+        <th mat-header-cell *matHeaderCellDef  sortActionDescription="Ordenar por area de interes">
+            Area de interes
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.areaInteres}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="getDisplayedColumns()"></tr>
+    <tr mat-row *matRowDef="let row; columns: getDisplayedColumns();"></tr>
+    </table>
+</div>

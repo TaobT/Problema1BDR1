@@ -1,0 +1,22 @@
+<mat-sidenav-container>
+  <mat-toolbar color="primary">
+      <span>Problema 1</span>
+      <span class="spacer"></span>
+      <button (click)="sidenav.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+  </mat-toolbar>
+
+  <mat-sidenav #sidenav position="end" mode="over">
+    <div class="opciones">
+      <h1 class="tituloOpciones">Menu</h1>
+      <mat-divider></mat-divider>
+      <button class="opcion" mat-button color="secondary" routerLink="/registro">Registro</button>
+      <mat-divider></mat-divider>
+      <button class="opcion" mat-button color="secondary" routerLink="/consultaa">Consulta A</button>
+      <button class="opcion" mat-button color="secondary" routerLink="/consultab">Consulta B</button>
+    </div>
+  </mat-sidenav>
+
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
