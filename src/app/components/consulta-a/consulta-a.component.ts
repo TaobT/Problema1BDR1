@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { DatabaseService } from 'src/app/services/database/database.service';
 
@@ -29,6 +30,13 @@ export class ConsultaAComponent implements OnInit {
 
   contador = 0;
 
+  @ViewChild(MatPaginator)
+  paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
 
   filtroFecha: FormGroup = new FormGroup({
     fecha: new FormControl(''),
@@ -47,7 +55,6 @@ export class ConsultaAComponent implements OnInit {
       this.filtroFecha.get('cantidadDeParticipantes')?.setValue(registros.length);
       this.dataSource.data = registros;
     });
-
   }
 
   ngOnInit(): void {

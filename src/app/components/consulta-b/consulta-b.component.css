@@ -1,0 +1,16 @@
+.tablasGeneros{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tituloTablaGeneros{
+    font-size: 30px;
+    font-weight: bold;
+    color: #006699;
+    margin-top: 10px;
+    margin-left: 10px;
+}
