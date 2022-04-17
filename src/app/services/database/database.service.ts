@@ -37,7 +37,7 @@ export class DatabaseService {
     return this.http.get(baseUrl + 'ciudades/' + nombre);
   }
 
- 
+
   deleteCiudad(id: number): Observable<any> {
     return this.http.delete(baseUrl + 'ciudades/' + id);
   }
@@ -65,7 +65,7 @@ export class DatabaseService {
   }
 
   createAreaInteres(areaInteres: Object): Observable<any> {
-    return this.http.post(baseUrl + 'areas', areaInteres);
+    return this.http.post(baseUrl + 'areas/', areaInteres);
   }
 
   getAreaInteresByName(nombre: string): Observable<any> {

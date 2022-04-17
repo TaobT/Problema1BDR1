@@ -1,0 +1,50 @@
+<form [formGroup]="formArea" class="formulario">
+    <div class="formularioCampos">
+        <h1 class="tituloFormulario">Areas</h1>
+        <div>
+            <h2 class="subtituloFormulario">Area de Interes</h2>
+            <mat-form-field class="campo" appearance="fill">
+                <mat-label>Nombre Area</mat-label>
+                <input matInput formControlName="nombreArea" >
+            </mat-form-field>
+        </div>
+    <div>
+        <button class="boton" mat-raised-button color="primary" (click)="onSubmitArea()" type="submit" [disabled]="formArea.invalid">Enviar</button>
+        <button class="boton" mat-raised-button color="warn" (click)="onClearArea()">Limpiar</button>
+    </div>
+    </div>
+</form>
+<mat-divider></mat-divider>
+<form [formGroup]="formCargo" class="formulario">
+    <div class="formularioCampos">
+        <h1 class="tituloFormulario">Cargos</h1>
+        <div>
+            <h2 class="subtituloFormulario">Cargo en la Empresa</h2>
+            <mat-form-field class="campo" appearance="fill">
+                <mat-label>Nombre Cargo</mat-label>
+                <input matInput formControlName="nombreCargo" >
+            </mat-form-field>
+        </div>
+    <div>
+        <button class="boton" mat-raised-button color="primary" (click)="onSubmitCargo()" type="submit" [disabled]="formCargo.invalid">Enviar</button>
+        <button class="boton" mat-raised-button color="warn" (click)="onClearCargo()">Limpiar</button>
+    </div>
+    </div>
+</form>
+<mat-divider></mat-divider>
+<form [formGroup]="formCiudad" class="formulario">
+    <div class="formularioCampos">
+        <h1 class="tituloFormulario">Ciudades</h1>
+        <div>
+            <h2 class="subtituloFormulario">Ciudad</h2>
+            <mat-form-field class="campo" appearance="fill">
+                <mat-label>Nombre Ciudad</mat-label>
+                <input matInput formControlName="nombreCiudad" >
+            </mat-form-field>
+        </div>
+    <div>
+        <button class="boton" mat-raised-button color="primary" (click)="onSubmitCiudad()" type="submit" [disabled]="formCiudad.invalid">Enviar</button>
+        <button class="boton" mat-raised-button color="warn" (click)="onClearCiudad()">Limpiar</button>
+    </div>
+    </div>
+</form>

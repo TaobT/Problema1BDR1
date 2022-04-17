@@ -1,8 +1,27 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Injectable, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatDatepickerIntl } from '@angular/material/datepicker';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { DatabaseService } from 'src/app/services/database/database.service';
+
+@Injectable()
+export class MatDatepickerIntlEsp extends MatDatepickerIntl{
+  override calendarLabel= 'Calendario';
+  override openCalendarLabel= 'Abrir calendario';
+  override closeCalendarLabel= 'Cerrar calendario';
+  override prevMonthLabel= 'Mes anterior';
+  override nextMonthLabel= 'Mes siguiente';
+  override prevYearLabel= 'Año anterior';
+  override nextYearLabel= 'Año siguiente';
+  override prevMultiYearLabel= 'Años anteriores';
+  override nextMultiYearLabel= 'Años siguientes';
+  override switchToMonthViewLabel= 'Ver mes';
+  override switchToMultiYearViewLabel= 'Ver años';
+  override formatYearRange(start: string, end: string): string {
+    return `${start} - ${end}`;
+  }
+}
 
 export interface Registro{
   nombre: string;

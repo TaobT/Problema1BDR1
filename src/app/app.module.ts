@@ -21,13 +21,12 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { ListGenerosRegistrosComponent } from './components/list-generos-registros/list-generos-registros.component';
-import { FiltrosRegistrosComponent, MatDatepickerIntlEsp } from './components/filtros-registros/filtros-registros.component';
-import { ListComponent } from './components/list/list.component';
 import { MatDatepickerIntl, MatDatepickerModule } from '@angular/material/datepicker';
-import { ConsultaAComponent } from './components/consulta-a/consulta-a.component';
+import { ConsultaAComponent, MatDatepickerIntlEsp } from './components/consulta-a/consulta-a.component';
 import { ConsultaBComponent } from './components/consulta-b/consulta-b.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormOtrosCamposComponent } from './components/form-otros-campos/form-otros-campos.component';
+import { ListOtrosCamposComponent } from './components/list-otros-campos/list-otros-campos.component';
 
 
 
@@ -39,11 +38,10 @@ import { HttpClientModule } from '@angular/common/http';
     SidenavComponent,
     FormRegistroComponent,
     ListRegistrosComponent,
-    ListGenerosRegistrosComponent,
-    FiltrosRegistrosComponent,
-    ListComponent,
     ConsultaAComponent,
-    ConsultaBComponent
+    ConsultaBComponent,
+    FormOtrosCamposComponent,
+    ListOtrosCamposComponent
   ],
   imports: [
     BrowserModule,
